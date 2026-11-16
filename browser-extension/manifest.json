@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "映取 · 浏览器助手",
+  "description": "在你启用的当前标签页检测视频，将所选媒体及相关请求信息发送给本机映取便携版。",
+  "version": "1.5.0",
+  "minimum_chrome_version": "120",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA36O2ldSt2r6+DANsGV2AwNp2rRCbERdT9KX5dqEQhF6Kp+c5uBSHsfRCxHvKy8l5u4ibug3+Qg0Ifg9SDOkOw5eAi9biQ130MgUnPZOxkbvrmahgz0F8L8jcspLVBDrWgRXBuFGxgN+mjmKgs1kaS0LDJGFF59v8Rsfqky1Vm6eZ+FEn5Z97HtDiSQw/N4OsSVGeAq9SeGZvSrq6BH2/15eyu6FG0mY3mykQMP1eSNy99vnRyrypUUfrHkVi3NP++6G0fCbm2HmDwVDJRO8f4R0D9yR3DQkiOijJ6ah7nq9Nt40oZFBu3NqcB8PlP24ViiUBt/yl0dziMOsig0BSjwIDAQAB",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "alarms",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_title": "映取 · 检测当前页视频",
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'"
+  }
+}

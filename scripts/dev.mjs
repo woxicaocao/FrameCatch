@@ -1,0 +1,14 @@
+import { createServer } from 'vite';
+import { build } from 'esbuild';
+import { spawn } from 'node:child_process';
+import electron from 'electron';
+const server = await createServer();
+await server.listen();
+await build({ entryPoints: ['electron/main.ts'], bundle: true, platform: 'node', format: 'cjs', outfile: 'dist-electron/main.cjs', external: ['electron'], sourcemap: true });
+await build({ entryPoints: ['electron/preload.ts'], bundle: true, platform: 'node', format: 'cjs', outfile: 'dist-electron/preload.cjs', external: ['electron'], sourcemap: true });
+await build({ entryPoints: ['electron/helper-preload.ts'], bundle: true, platform: 'node', format: 'cjs', outfile: 'dist-electron/helper-preload.cjs', external: ['electron'], sourcemap: true });
+const env = { ...process.env, FRAMECATCH_DEV_URL: 'http://127.0.0.1:5173' };
+delete env.ELECTRON_RUN_AS_NODE;
+const child = spawn(electron, ['.'], { stdio: 'inherit', env, windowsHide: true });
+child.on('exit', async code => { await server.close(); process.exitCode = code ?? 0; });
+process.on('SIGINT', () => child.kill());

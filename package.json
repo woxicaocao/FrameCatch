@@ -1,0 +1,121 @@
+{
+  "name": "framecatch",
+  "version": "1.5.0",
+  "private": true,
+  "type": "module",
+  "description": "映取 · Windows 便携视频下载器",
+  "author": "FrameCatch",
+  "license": "MIT",
+  "main": "dist-electron/main.cjs",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "start": "electron .",
+    "test": "vitest run",
+    "test:smoke": "node scripts/smoke.mjs",
+    "test:platforms": "node scripts/check-platforms.mjs",
+    "test:ui": "node tests/ui-smoke.mjs",
+    "test:portable": "node scripts/smoke-portable.mjs",
+    "test:browser": "node tests/browser-helper-smoke.mjs",
+    "test:request": "node tests/request-import-smoke.mjs",
+    "test:extension": "node tests/extension-e2e.mjs",
+    "test:extension-unit": "node --test tests/browser-extension.test.mjs",
+    "test:social-ui": "node tests/social-ui-smoke.mjs",
+    "test:social-real": "node tests/social-real-smoke.mjs",
+    "test:extension-reconnect": "node tests/extension-reconnect-e2e.mjs",
+    "test:vimeo-extension": "node tests/vimeo-extension-e2e.mjs",
+    "icon": "node scripts/make-icon.mjs",
+    "deps:prepare": "node scripts/prepare-deps.mjs",
+    "package:dir": "node scripts/package.mjs --dir",
+    "package:portable": "node scripts/package.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "1.73.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "2.6.2",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "electron": "45.3.2",
+    "electron-builder": "26.18.0",
+    "esbuild": "0.28.2",
+    "playwright": "1.65.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  },
+  "build": {
+    "appId": "local.framecatch.desktop",
+    "productName": "FrameCatch",
+    "asar": true,
+    "npmRebuild": false,
+    "files": [
+      "dist-electron/**/*",
+      "dist-renderer/**/*",
+      "!node_modules/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/bin",
+        "to": "bin",
+        "filter": [
+          "**/*",
+          "!**/*.backup-*"
+        ]
+      },
+      {
+        "from": "resources/licenses",
+        "to": "licenses"
+      },
+      {
+        "from": "resources/dependencies.json",
+        "to": "dependencies.json"
+      },
+      {
+        "from": "resources/icon.png",
+        "to": "icon.png"
+      },
+      {
+        "from": "resources/browser-helper.html",
+        "to": "browser-helper.html"
+      },
+      {
+        "from": "resources/browser-helper.js",
+        "to": "browser-helper.js"
+      },
+      {
+        "from": "docs",
+        "to": "docs"
+      }
+    ],
+    "extraFiles": [
+      {
+        "from": "browser-extension",
+        "to": "浏览器插件",
+        "filter": [
+          "**/*",
+          "!**/*.test.*"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "resources/icon.ico",
+      "signAndEditExecutable": true,
+      "executableName": "FrameCatch"
+    },
+    "artifactName": "FrameCatch-${version}-Windows-x64-portable.${ext}"
+  }
+}

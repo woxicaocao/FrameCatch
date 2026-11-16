@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "platform": "win32-x64",
+  "preparedAt": "2026-11-15T04:01:24.916Z",
+  "dependencies": [
+    {
+      "name": "yt-dlp",
+      "release": "2026.10.26",
+      "repository": "https://github.com/yt-dlp/yt-dlp",
+      "releaseUrl": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.10.26",
+      "sourceUrl": "https://github.com/yt-dlp/yt-dlp/tree/2026.10.26",
+      "downloadUrl": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.26/yt-dlp.exe",
+      "checksumUrl": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.26/SHA2-256SUMS",
+      "archiveSha256": "f5389d3698ecde4ef06f4e6b1ce0294fe9ac1396228c8990b8d3416d6d177a7d",
+      "archiveSize": 23575744,
+      "license": "Unlicense; bundled components have their own licenses",
+      "versions": {
+        "yt-dlp.exe": "2026.10.26"
+      },
+      "files": [
+        {
+          "name": "yt-dlp.exe",
+          "size": 23575744,
+          "sha256": "f5389d3698ecde4ef06f4e6b1ce0294fe9ac1396228c8990b8d3416d6d177a7d"
+        }
+      ]
+    },
+    {
+      "name": "ffmpeg",
+      "release": "autobuild-2026-11-14-12-37",
+      "repository": "https://github.com/FFmpeg-Builds/FFmpeg-Builds",
+      "releaseUrl": "https://github.com/FFmpeg-Builds/FFmpeg-Builds/releases/tag/autobuild-2026-11-14-12-37",
+      "sourceUrl": "https://github.com/FFmpeg/FFmpeg/tree/d838f9f9ae",
+      "buildSourceUrl": "https://github.com/FFmpeg-Builds/FFmpeg-Builds",
+      "downloadUrl": "https://github.com/FFmpeg-Builds/FFmpeg-Builds/releases/download/autobuild-2026-11-14-12-37/ffmpeg-n9.0.2-57-gd838f9f9ae-win64-lgpl-shared-9.0.zip",
+      "checksumUrl": "https://github.com/FFmpeg-Builds/FFmpeg-Builds/releases/download/autobuild-2026-11-14-12-37/checksums.sha256",
+      "archiveSha256": "cdb9dd9f94bc3958dd0d7ba39ec61b8e9d0a68351bf2f8be22178bd8e0a5aa91",
+      "archiveSize": 76534475,
+      "license": "LGPL-3.0-or-later; see accompanying component notices",
+      "versions": {
+        "ffmpeg.exe": "ffmpeg version n9.0.2-57-gd838f9f9ae-20261114 Copyright (c) 2000-2026 the FFmpeg developers\r\nbuilt with gcc 16.2.0 (crosstool-NG 1.29.0.36_fbb6372)\r\nconfiguration: --prefix=/ffbuild/prefix --pkg-config-flags=--static --pkg-config=pkg-config --cross-prefix=x86_64-w64-mingw32- --arch=x86_64 --target-os=mingw32 --enable-version3 --disable-debug --enable-shared --disable-static --disable-w32threads --enable-pthreads --enable-iconv --enable-zlib --enable-libxml2 --enable-libvmaf --enable-fontconfig --enable-libharfbuzz --enable-libfreetype --enable-libfribidi --enable-lcms2 --enable-vulkan --enable-libdav1d --enable-libvorbis --enable-librav1e --enable-librsvg --disable-libxcb --disable-xlib --disable-libpulse --enable-gmp --enable-lzma --enable-liblcevc-dec --enable-opencl --enable-amf --enable-libaom --disable-avisynth --enable-chromaprint --disable-libdavs2 --disable-libdvdread --disable-libdvdnav --disable-libfdk-aac --enable-ffnvcodec --enable-cuda-llvm --disable-frei0r --enable-libgme --enable-libkvazaar --enable-libaribb24 --enable-libaribcaption --enable-libass --enable-libbluray --enable-libjxl --enable-libmp3lame --enable-libopus --enable-libplacebo --enable-librist --enable-libssh --enable-libtheora --enable-libvpx --enable-libwebp --enable-libzmq --enable-lv2 --enable-libvpl --enable-openal --enable-liboapv --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --disable-librubberband --enable-schannel --enable-sdl2 --enable-libsnappy --enable-libsoxr --enable-libsrt --enable-libsvtav1 --enable-libtwolame --enable-libuavs3d --disable-libdrm --enable-vaapi --enable-vapoursynth --disable-libvidstab --enable-libvvenc --disable-whisper --disable-libx264 --disable-libx265 --disable-libxavs2 --disable-libxvid --enable-libzimg --disable-libzvbi --extra-cflags=-DLIBTWOLAME_STATIC --extra-cxxflags= --extra-libs=-lgomp --extra-ldflags=-pthread --extra-ldexeflags= --cc=x86_64-w64-mingw32-gcc --cxx=x86_64-w64-mingw32-g++ --ar=x86_64-w64-mingw32-gcc-ar --ranlib=x86_64-w64-mingw32-gcc-ranlib --nm=x86_64-w64-mingw32-gcc-nm --extra-version=20261114\r\nlibavutil      61.  1.102 / 61.  1.102\r\nlibavcodec     63.  1.102 / 63.  1.102\r\nlibavformat    63.  1.102 / 63.  1.102\r\nlibavdevice    63.  1.102 / 63.  1.102\r\nlibavfilter    12.  1.102 / 12.  1.102\r\nlibswscale     10.  1.102 / 10.  1.102\r\nlibswresample   7.  1.102 /  7.  1.102\r\n\r\nExiting with exit code 0",
+        "ffprobe.exe": "ffprobe version n9.0.2-57-gd838f9f9ae-20261114 Copyright (c) 2007-2026 the FFmpeg developers\r\nbuilt with gcc 16.2.0 (crosstool-NG 1.29.0.36_fbb6372)\r\nconfiguration: --prefix=/ffbuild/prefix --pkg-config-flags=--static --pkg-config=pkg-config --cross-prefix=x86_64-w64-mingw32- --arch=x86_64 --target-os=mingw32 --enable-version3 --disable-debug --enable-shared --disable-static --disable-w32threads --enable-pthreads --enable-iconv --enable-zlib --enable-libxml2 --enable-libvmaf --enable-fontconfig --enable-libharfbuzz --enable-libfreetype --enable-libfribidi --enable-lcms2 --enable-vulkan --enable-libdav1d --enable-libvorbis --enable-librav1e --enable-librsvg --disable-libxcb --disable-xlib --disable-libpulse --enable-gmp --enable-lzma --enable-liblcevc-dec --enable-opencl --enable-amf --enable-libaom --disable-avisynth --enable-chromaprint --disable-libdavs2 --disable-libdvdread --disable-libdvdnav --disable-libfdk-aac --enable-ffnvcodec --enable-cuda-llvm --disable-frei0r --enable-libgme --enable-libkvazaar --enable-libaribb24 --enable-libaribcaption --enable-libass --enable-libbluray --enable-libjxl --enable-libmp3lame --enable-libopus --enable-libplacebo --enable-librist --enable-libssh --enable-libtheora --enable-libvpx --enable-libwebp --enable-libzmq --enable-lv2 --enable-libvpl --enable-openal --enable-liboapv --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --disable-librubberband --enable-schannel --enable-sdl2 --enable-libsnappy --enable-libsoxr --enable-libsrt --enable-libsvtav1 --enable-libtwolame --enable-libuavs3d --disable-libdrm --enable-vaapi --enable-vapoursynth --disable-libvidstab --enable-libvvenc --disable-whisper --disable-libx264 --disable-libx265 --disable-libxavs2 --disable-libxvid --enable-libzimg --disable-libzvbi --extra-cflags=-DLIBTWOLAME_STATIC --extra-cxxflags= --extra-libs=-lgomp --extra-ldflags=-pthread --extra-ldexeflags= --cc=x86_64-w64-mingw32-gcc --cxx=x86_64-w64-mingw32-g++ --ar=x86_64-w64-mingw32-gcc-ar --ranlib=x86_64-w64-mingw32-gcc-ranlib --nm=x86_64-w64-mingw32-gcc-nm --extra-version=20261114\r\nlibavutil      61.  1.102 / 61.  1.102\r\nlibavcodec     63.  1.102 / 63.  1.102\r\nlibavformat    63.  1.102 / 63.  1.102\r\nlibavdevice    63.  1.102 / 63.  1.102\r\nlibavfilter    12.  1.102 / 12.  1.102\r\nlibswscale     10.  1.102 / 10.  1.102\r\nlibswresample   7.  1.102 /  7.  1.102"
+      },
+      "files": [
+        {
+          "name": "avcodec-63.dll",
+          "size": 91675648,
+          "sha256": "fb77f73505d9573619acb7d4649e9ab475958cbe87848c1278b5eea900d1a6d4"
+        },
+        {
+          "name": "avdevice-63.dll",
+          "size": 5008384,
+          "sha256": "ccd4fc4859f2b680543cfecbcb6dfa2e91df7d560835cf29ad6f6f269411219c"
+        },
+        {
+          "name": "avfilter-12.dll",
+          "size": 31876096,
+          "sha256": "5b38c30df716f394eb8ef7276f4d34678956ac916f75b2d673c095d4ca671d28"
+        },
+        {
+          "name": "avformat-63.dll",
+          "size": 19888128,
+          "sha256": "1bc7c4453fa62f66bceb3f962c364f7f752906d62fa1b36b746f96d570bccead"
+        },
+        {
+          "name": "avutil-61.dll",
+          "size": 3025408,
+          "sha256": "016e4b56f902afccc704b8cdb1b6bc75fd1f5dde9ad97d34f78cf2353cbbd4a3"
+        },
+        {
+          "name": "ffmpeg.exe",
+          "size": 551424,
+          "sha256": "2c54793ec36efe975a4dcb1458931f1ee6a6274fe5e81d5383dd98f0fd1c09cc"
+        },
+        {
+          "name": "ffprobe.exe",
+          "size": 269824,
+          "sha256": "b772978f256409752f53ab3deb438fb9ba1c101bf42254f0144ee875dcb71242"
+        },
+        {
+          "name": "swresample-7.dll",
+          "size": 747008,
+          "sha256": "80b87f6f1a2c088e721dd0b4ed3c853c51a931adfe7c166fe3418ba39aeba57a"
+        },
+        {
+          "name": "swscale-10.dll",
+          "size": 2343936,
+          "sha256": "b3f9cc4f536fabe4987d26732347287dbb8f122abe90906a54937286448c0dfd"
+        }
+      ]
+    },
+    {
+      "name": "deno",
+      "release": "v2.9.8",
+      "repository": "https://github.com/denoland/deno",
+      "releaseUrl": "https://github.com/denoland/deno/releases/tag/v2.9.8",
+      "sourceUrl": "https://github.com/denoland/deno/tree/v2.9.8",
+      "downloadUrl": "https://github.com/denoland/deno/releases/download/v2.9.8/deno-x86_64-pc-windows-msvc.zip",
+      "checksumUrl": "https://github.com/denoland/deno/releases/download/v2.9.8/deno-x86_64-pc-windows-msvc.zip.sha256sum",
+      "archiveSha256": "cba84b26e0df5ae7f74fc66b86a95b866872a86292ebd84fa1e959927edd93bf",
+      "archiveSize": 42917472,
+      "license": "MIT; bundled components have their own licenses",
+      "versions": {
+        "deno.exe": "deno 2.9.8 (stable, release, x86_64-pc-windows-msvc)\nv8 15.0.245.2-rusty\ntypescript 6.0.3"
+      },
+      "files": [
+        {
+          "name": "deno.exe",
+          "size": 98081568,
+          "sha256": "924397800533d3eb0ed0c889b20ad70e18b970d93acd8135bc043f425e528266"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "ffmpeg-d838f9f9aeb0e09b4d068e2af20a46a12640696f.tar.gz",
+      "url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/d838f9f9aeb0e09b4d068e2af20a46a12640696f",
+      "sha256": "479396204090c378cc2d181fef5355a1da64c5903e29a7fda687960101e70df9",
+      "size": 17330939,
+      "checksumNote": "Upstream provides no detached checksum for generated source archives; this digest records the HTTPS download of the pinned commit."
+    },
+    {
+      "name": "ffmpeg-build-recipes-c9fe5114060e507409f7ee07edfd82efaf25d767.tar.gz",
+      "url": "https://codeload.github.com/FFmpeg-Builds/FFmpeg-Builds/tar.gz/c9fe5114060e507409f7ee07edfd82efaf25d767",
+      "sha256": "fb708487f587ffbf6c80c8d34fe0f96f7da8a1f88b8b6b5d1b27d91715fa2595",
+      "size": 119598,
+      "checksumNote": "Upstream provides no detached checksum for generated source archives; this digest records the HTTPS download of the pinned commit."
+    }
+  ]
+}

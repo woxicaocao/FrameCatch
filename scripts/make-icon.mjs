@@ -1,0 +1,1 @@
+import './icon-renderer.cjs';

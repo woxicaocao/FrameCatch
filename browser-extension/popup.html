@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>映取 · 浏览器助手</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><div class="brand-icon">映</div><div><h1>映取 <span>浏览器助手</span></h1><p>在浏览器播放，交给映取下载</p></div><span class="version">1.5.0</span></header>
+  <main>
+    <section class="connection"><div class="section-label"><span class="step">1</span><h2>连接本机映取</h2><span data-testid="connection-state" id="connection-state" class="badge">未配对</span></div><p id="pair-help" class="help">首次输入映取中的 8 位配对码，之后自动连接。</p><div class="pair-row"><input data-testid="pair-code" id="pair-code" maxlength="8" autocomplete="off" spellcheck="false" aria-label="8位配对码" placeholder="8 位配对码"><button data-testid="pair-button" id="pair-button">配对</button><button data-testid="refresh-status" id="refresh-status" class="subtle" title="检查连接" aria-label="检查连接">↻</button><button data-testid="forget-pairing" id="forget-pairing" class="text-button" hidden>忘记本机连接</button></div></section>
+    <section><div class="section-label"><span class="step">2</span><h2>检测当前页面</h2><span id="detect-state" class="badge">未开启</span></div><p id="page-title" class="page-title">正在读取当前标签页…</p><p class="help">首次启用需授权网站及跨站视频 CDN。仅检测你手动开启的标签页，30 分钟后停止；请启用后刷新网页并播放视频。</p><div class="buttons"><button data-testid="detect-start" id="detect-start">开始检测当前页</button><button data-testid="detect-stop" id="detect-stop" class="secondary">停止检测</button><button data-testid="clear-captures" id="clear-captures" class="text-button">清空资源</button></div></section>
+    <section class="media-section"><div class="section-label"><span class="step">3</span><h2>选择视频资源</h2><span id="capture-count" class="count">0</span></div><div data-testid="capture-list" id="capture-list" class="capture-list" role="radiogroup" aria-label="检测到的视频资源"></div><p id="partial-media-hint" data-testid="partial-media-hint" class="help" role="status" hidden></p><p id="empty-state" class="empty">等待检测。先开启检测，再刷新并播放视频。<br>完整清单优先；传输分片不会列入。</p><button data-testid="capture-send" id="capture-send" class="send-button" disabled>发送到映取</button></section>
+    <div data-testid="status-message" id="status-message" class="status" role="status" aria-live="polite">只通过本机连接发送你选择的视频请求。</div>
+  </main>
+  <footer>按授权携带媒体请求中的相关登录信息 · 不读取密码</footer>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

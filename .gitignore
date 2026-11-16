@@ -1,0 +1,25 @@
+node_modules/
+dist-electron/
+dist-renderer/
+releases/
+.resources-cache/
+.test-artifacts/
+data/
+Downloads/
+work/
+resources/bin/*.exe
+*.log
+
+# 本机便携程序、下载成品与发行压缩包不进入源码历史。
+/映取便携版*/
+/实测下载结果/
+/FrameCatch-*.zip*
+/resources/bin/
+/resources/licenses/sources/*.tar.gz
+
+# 用户故障记录、运行凭据与本机备份仅保留在电脑上。
+/docs/待修问题/
+.env
+.env.*
+!.env.example
+*.backup-*
